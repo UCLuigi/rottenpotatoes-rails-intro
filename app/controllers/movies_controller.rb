@@ -22,7 +22,7 @@ class MoviesController < ApplicationController
     if params.has_key?(:ratings)
       @rating = params[:ratings].keys
       session[:ratings] = @rating
-    elsif session.has_key?(:rating)
+    elsif session.has_key?(:ratings)
       @rating = session[:ratings]
     else
       @rating = @all_ratings
